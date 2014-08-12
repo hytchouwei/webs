@@ -7,8 +7,8 @@
 
 
 
-#leftnav{ position: fixed;width: 15px; height: 55px;top: 18%; left: 0;padding:5px 0 5px 0; background-image: url("image/taobao.png"); background-repeat: repeat-y;}
-#leftnav a{color: #666;}
+#leftnav{background-color: #666; border-radius: 50%; position: fixed;width: 15px; height: 15px;top: 18%; left:5%; }
+#leftnav a{color: #666;width: 15px; height: 15px;display: block;}
 
 
 /* 顶导航栏*/
@@ -42,7 +42,7 @@
 #sosoLeftBox li{ width: 58px; height: 28px;font-family: 宋体;font-size: 14px; font-weight: 700;color: #a8a8a8; line-height: 28px;}
 #sosoLeftBox li:hover{ background-color: #d2e1f1;color: #3297d8;cursor: pointer;}
 #sosoLeft{ width: 48px; height: 30px; padding: 0 10px 0 5px; display: block; float: left; line-height: 30px; background-image: url("images/qqbg_1.5.5.png"); background-position: -877px -200px; font-family: 宋体;font-size: 14px; font-weight: 700;color: #a8a8a8;}
-#sosoBox:hover #sosoLeft{ background-position: -552px -200px; }
+#sosoLeftBox:hover #sosoLeft{ background-position: -552px -200px; }
 #sosoText{ width: 274px; height: 30px; float: left; border:none; line-height: 30px;}
 #sosoRight{ width: 50px; height: 30px; display: block; float: left; background-image: url("../image/sosoLogo.png"); background-position: 0 8px; background-repeat: no-repeat;}
 /*搜索器end*/
@@ -290,7 +290,12 @@ h2 a{color: #3297d8; font-weight: bold;font-family: 宋体;font-size: 14px; line
 #lm9RightTitle2{ width: 225px; height: 80px;float: right; text-align: left;}
 #lm9RightTitle2 li{ width: 225px; height: 38px;}
 #lm9RightTitle2 li a{ color:#2D374B; line-height: 38px;}
-#lm9RightContent{ width: 318px; height: 250px; background-image: url("../image/taobao.png");}
+#lm9RightContent{ width: 318px; height: 250px; }
+.lm9RightContentD{width: 59px; height: 248px; float: left;}
+#lm9RightContentC{ width: 200px;height: 250px;float: left;background-image: url("../image/lm9Right/T1TrawFglbXXXXPav4-200-250.jpg");}
+.lm9RightContentD li{ width: 59px; height: 31px;display: block;line-height: 31px;background-image: url("images/1328595636476.gif");}
+.picS{ background-image:url("images/T1X7YOXmReXXchKLPa-6-31.gif");}
+.lm9RightContentD li a{color: #666;}
 /*栏目九end*/
 
 /*栏目十*/

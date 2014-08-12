@@ -126,10 +126,15 @@ $(function(){
 	},function(){});
 
 	$("#rightArea1LeftA").click(function(){
-		$("#rightArea1LeftA").css({"left":"-353px","top":"-1px"});
+		$("#rightArea1LeftA").css({"left":"-353px","top":"-1px","background-position":"right bottom"});
 		$("#rightArea1showUl").show();
+
+		$("#rightArea1show").hover(function(){},function(){
+			$("#rightArea1LeftA").css({"left":"","top":"","background-position":""});
+			$("#rightArea1showUl").hide();
+		});
 	});
-	$("#rightArea1show")
+
 });
 
 var directionR=-1;
@@ -166,6 +171,66 @@ function newchange(time,direction){//-1表示左，0表示右   time : 动画时
 		n=0;
 	}
 }
+
+
+$(function(){//显示图片
+
+	showPicTimer = setInterval("showPic()",2000);
+
+	$("#lm9RightContent li").hover(function(){
+		clearInterval(showPicTimer);
+		var num = $(this).attr("class").split("pic");
+		
+		$("#lm9RightContent li").css("background-image",'url("css/images/1328595636476.gif")');
+		//$(".pic"+picI).css("background-image",'url("css/images/1328595636476.gif")');
+		$(".pic"+num[1]).css("background-image",'url("css/images/T1X7YOXmReXXchKLPa-6-31.gif")');
+		
+		$("#lm9RightContentC").css("background-image",picAddress[num[1]-1]);
+
+		picI=num[1];
+	},function(){
+		//$("#lm9RightContent li").css("background-image",'url("css/images/1328595636476.gif")');
+		showPicTimer = setInterval("showPic()",2000);
+	});
+
+
+});
+
+
+var picAddress=new Array('url("image/lm9Right/T1DHytFk0fXXXXPav4-200-250.jpg")',
+		'url("image/lm9Right/T1hCStFXxfXXXXPav4-200-250.jpg")',
+		'url("image/lm9Right/T1pQKuFf0eXXXXPav4-200-250.jpg")',
+		'url("image/lm9Right/T1PSywFbtaXXXXPav4-200-250.jpg")',
+		'url("image/lm9Right/T1TrawFglbXXXXPav4-200-250.jpg")',
+		'url("image/lm9Right/T1VdGxFe8XXXXXPav4-200-250.jpg")',
+		'url("image/lm9Right/T1YCKuFateXXXXPav4-200-250.jpg")',
+		'url("image/lm9Right/T11bSwFm8bXXXXPav4-200-250.jpg")',
+		'url("image/lm9Right/T11OGuFoxdXXXXPav4-200-250.jpg")',
+		'url("image/lm9Right/T13PVyFaVbXXXXPav4-200-250.jpg")',
+		'url("image/lm9Right/T14L9uFd4cXXXXPav4-200-250.jpg")',
+		'url("image/lm9Right/T1TrawFglbXXXXPav4-200-250.jpg")',
+		'url("image/lm9Right/T1hCStFXxfXXXXPav4-200-250.jpg")',
+		'url("image/lm9Right/T1TrawFglbXXXXPav4-200-250.jpg")',
+		'url("image/lm9Right/T1VdGxFe8XXXXXPav4-200-250.jpg")',
+		'url("image/lm9Right/T11bSwFm8bXXXXPav4-200-250.jpg")'
+		);
+
+var picI=1;
+
+function showPic(){
+	$("#lm9RightContent li").css("background-image",'url("css/images/1328595636476.gif")');
+	$(".pic"+picI).css("background-image",'url("css/images/T1X7YOXmReXXchKLPa-6-31.gif")');
+	$("#lm9RightContentC").css("background-image",picAddress[picI-1]);
+
+	
+	picI++;
+	if(picI==16)
+	{
+		picI=1;
+	}
+}
+
+
 
 
 	// $("#layoutPicContent2 li").hover(function(){
