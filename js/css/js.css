@@ -1,0 +1,12 @@
+#one{ width: 1010px; height: 202px;margin: 50px auto;}
+#two{ width: 1010px; height: 500px;margin: 50px auto;}
+#three{ width: 420px; height: 30px; padding: 5px; margin: 10px auto ; border: 1px solid #ccc;text-align: center;}
+#dateA{ width: 200px; height: 30px; float: left;}
+#timeA{ width: 160px; height: 30px; float: right;}
+.dit{ width: 20px; height: 30px;background-image: url("../images/dit.png");float: left;}
+.heng{background-position: 0 -330px;}
+.mao{background-position: 0 -300px;}
+.btn{ width: 200px; height: 100px; border: 1px solid #ccc; border-radius: 10px; box-shadow: 1px 1px 10px #000;float: left;}
+.btn2{ width: 100px; height: 200px; border: 1px solid #ccc; border-radius: 10px; box-shadow: 1px 1px 10px #000;float: left;}
+
+#show{display: none; width: 100px; height: 100px;position: relative;top: -200px; left: 50%; background-color: #666; border-radius: 20%;}
