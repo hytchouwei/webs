@@ -18,10 +18,10 @@ $(function(){
 // });
 
 	//alert('浏览器的高度：'+$(window).height());
-	$(window).height(function(){
-		$(".black").css("height",$(window).height());
-	});
-	
+	// $(window).height(function(){
+	// 	$(".black").css("height",$(window).height());
+	// });
+	//$(".black").css("height",$(window).height());
 
 
 })

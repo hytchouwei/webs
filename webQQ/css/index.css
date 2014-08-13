@@ -5,10 +5,67 @@ a{text-decoration: none;}
 
 
 
-.black{ width: 100%; min-width: 960px; height: 100%;background-image: url("images/fullbody.png");overflow: hidden;}
+.black{ width: 100%; min-width: 960px; height: 100%;height: 667px; background-image: url("images/fullbody.png");overflow: hidden;}
 #bgAllImage{ width: 100%;}
-.bgAllImage{ width: 100%; height: 100%;position: absolute;left: 0;top: 0;}
+.bgAllImage{ width: 100%; height: 100%; height: 667px;position: absolute;left: 0;top: 0;}
 .wrap{ width: 1000px; height: 100%;margin: 0 auto;}
-.main_container{ width: 280px; height: 100%;float: left;background-color: #ccc;}
-#container{width: 700px; height: 100%; margin-left: 20px;float: left;background-color: #ccc;} 
-.mainPanel{ width: 280px; height: 80%;position: relative;top: 18%;left: 0;border-radius: 7px;box-shadow: 2px 2px 6px rgba(0,0,0,0.7);background: #fff;}
+
+/*Left*/
+.mainContainer{ width: 280px; height: 100%;float: left;}
+
+.mainPanel{ width: 280px; height: 80%;position: relative;top: 12%;left: 0;border-radius: 7px;box-shadow: 2px 2px 6px rgba(0,0,0,0.7);background: #fff;}
+.panelBodyContainer{ width: 100%; position: absolute;bottom: 50px;left: 0;height: 484px;}
+.panelFooter{ width: 100%;position: absolute;bottom: 0;left: 0;height: 50px;background-image: linear-gradient(rgb(85, 85, 85), rgb(34, 34, 34));border-radius: 0 0 6px 6px;}
+.panelBody{ width: 100%; height: 100%; position: relative;}
+
+.accountHeader {z-index: 10001;position: absolute;display: block;width: 100%;top: -50px;}
+.avatarWrap{ width: 40px;height: 40px;left: 20px;top: -22px;position: absolute;border: 3px solid #fff;box-shadow: 1px 1px 5px #000;}
+.userOnlineState{position: absolute;right: 0;bottom: 0;width: 10px;height: 10px;background-image: url("../images/state_sprite.gif");background-repeat: no-repeat;}
+.textUserNick{ margin-left: 77px;top: -21px;font-family: 微软雅黑;font-size: 16px;line-height: 16px; position: absolute;text-shadow: 0 0 3px snow,0 0 3px snow,0 0 3px snow,0 0 3px snow;overflow: hidden;height: 22px;width: 148px; }
+.textUserShuoShuo{ margin-left: 77px;top: 4px;font-family: 微软雅黑;font-size: 12px;line-height: 12px; position: absolute;text-shadow: 0 0 3px snow,0 0 3px snow,0 0 3px snow,0 0 3px snow;overflow: hidden;height: 22px;width: 148px; }
+
+.iconsList{ position: absolute;left: 20px;top: 30px; display: inline-block;}
+.iconsList a{ text-indent: -9999px;float: left;margin-right: 8px;width: 15px;height: 15px;background-image: url("../images/icons_list.png");background-repeat: no-repeat;}
+.iconsList .i_qzone {background-position: 0 0;}
+.iconsList .i_mail {background-position: -20px 0;}
+.iconsList .i_weibo {background-position: -40px 0;}
+.iconsList .i_video {background-position: -60px 0;}
+.iconsList .i_qqwebsite {background-position: -81px 0;}
+.iconsList .i_music {background-position: -103px 0;}
+.iconsList .i_wallet {background-position: -124px 0;}
+.iconsList .i_pengyou {background-position: -144px 0;}
+.iconsList .i_weiyun {background-position: -166px 0;}
+
+.panel{ width: 100%;height: 100%;position: absolute;top: 0;left: 0;display: none;}
+.selectPanel{display: block;}
+#panelHeader1{width: 100%;height: 45px; border-radius: 6px 6px 0 0; background-image: linear-gradient(rgb(85, 85, 85), rgb(34, 34, 34));z-index: 100;}
+.panelHeader{position:relative;}
+#panelTitle1{width: 230px;height: 18px; padding: 13.5px 30px 13.5px 20px;font-weight: 400;font-size: 18px;line-height: 100%;text-align: center;font-family: 微软雅黑;color: #fff;}
+
+
+.panelBodyWrapper1{ top:45px; position:absolute;left: 0;width: 100%;bottom: 0;}
+.panelBodyWrapperBox{ width: 100%; min-height: 100%;position: relative;}
+.currentChatScrollArea{ width: 100%;position: absolute;top: 0;left: 0;overflow: hidden;bottom: 0;}
+.currentChatList{ width: 100%;position: relative;box-sizing: border-box;background: #fff;box-shadow: 0 1px rgba(255,255,255,0.7);}
+.listItem{cursor: pointer; position: relative;border-top: 1px solid #e3e3e3;padding: 0.15em 1px;line-height: 100%;cursor: pointer;background: linear-gradient(#fff,#f1f1f1);width: 100%;height: 56px;}
+.avatar{ width: 40px; height: 40px;display: block;float: left;margin: 8px;position: relative;}
+.memberNick{ width: auto;height: 23px; line-height: 23px;padding: 6px 0 0 5px;overflow: hidden;font-family: 微软雅黑;font-size: 16px;color: #000;}
+.memberMsg{ overflow: hidden;font-size: 12px;color: #aaa;line-height: 28px;padding-left: 5px;text-align: left;font-family: 微软雅黑;}
+.memberNick span{color: #aaa;line-height: 17px;font-size: 12px;}
+
+
+/*Left end*/
+
+/*Right*/
+#container{width: 700px; height: 100%; margin-left: 20px;float: left;position: relative;} 
+#chatPanel{ width: 100%;height: 80%;top: 12%;left: 0;position: absolute;}
+
+#panelHeader{width: 100%;height: 45px; border-radius: 6px 6px 0 0;position: relative; background-image: linear-gradient(rgb(85, 85, 85), rgb(34, 34, 34));}
+#panelLeftButton{width: 43px;height: 19px;padding: 6px 10px;border:1px solid;border-radius: 5px;margin: 5px 0 7px 15px;float: left;position: relative; }
+#panelTitle{ display: block; width: 487px; height: 18px;padding: 13.5px 30px 13.5px 20px;float: left;text-align: center;}
+#panelRightButton{width: 43px;height: 19px;padding: 6px 10px;border:1px solid;border-radius: 5px;margin: 5px 10px 7px 2px;float: left;position: relative; }
+
+#panelBodyWrapper{ width: 100%;position: absolute;top: 45px; bottom: 50px; left: 0;height: auto;}
+
+#panelFooter{ width: 100%; height: 50px; position: absolute; left: 0;bottom: 0;border-radius: 0 0 6px 6px;background-image: linear-gradient(rgb(85, 85, 85), rgb(34, 34, 34));}
+/*Right end*/
