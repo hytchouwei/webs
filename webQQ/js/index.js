@@ -23,5 +23,27 @@ $(function(){
 	// });
 	//$(".black").css("height",$(window).height());
 
+	$("#session").find(".icon").css("background-image",iconN[0]);
+	
+	$(".nav").click(function(){
+		$(".nav .icon").css("background-image","");
 
-})
+		var n =$(this).attr("num");
+
+		$(".nav").removeClass("navSelected");
+		$(this).addClass("navSelected");
+		$(this).find(".icon").css("background-image",iconN[n-1]);
+		
+		
+		$(".panel").hide();
+		$("#panel"+n).show();
+	});
+
+
+});
+
+ var iconN=new Array('url("images/tab_icon_conversation_selected.png")',
+ 		'url("images/tab_icon_contact_selected.png")',
+ 		'url("images/tab_icon_plugin_selected.png")',
+ 		'url("images/tab_icon_setup_selected.png")'
+ 	);
