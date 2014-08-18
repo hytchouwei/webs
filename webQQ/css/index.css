@@ -5,17 +5,18 @@ a{text-decoration: none;}
 
 
 
-.black{ width: 100%; min-width: 960px; height: 100%;height: 667px; background-image: url("images/fullbody.png");overflow: hidden;}
+.black{ width: 100%; min-width: 960px; height: 100%;height: 667px; background-image: url("images/fullbody.png");overflow: auto;}
 #bgAllImage{ width: 100%;}
 .bgAllImage{ width: 100%; height: 100%; height: 667px;position: absolute;left: 0;top: 0;}
+.draggableBox{ width: 65%; height: 100%;position: absolute;top:0;right: 0;min-height: 670px;}
 .wrap{ width: 1000px; height: 100%;margin: 0 auto;}
 
-/*Left*/
+/*整体左边*/
 .mainContainer{ width: 280px; height: 100%;float: left;}
 
 .mainPanel{ width: 280px; height: 80%;position: relative;top: 12%;left: 0;border-radius: 7px;box-shadow: 2px 2px 6px rgba(0,0,0,0.7);background: #fff;}
 .panelBodyContainer{ width: 100%; position: absolute;bottom: 50px;left: 0;height: 484px;}
-.panelFooter{ width: 100%;position: absolute;bottom: 0;left: 0;height: 50px;background-image: linear-gradient(rgb(85, 85, 85), rgb(34, 34, 34));border-radius: 0 0 6px 6px;}
+.panelFooter{ width: 100%;position: absolute;bottom: 0;left: 0;height: 50px;background-image:-webkit-linear-gradient(rgb(85, 85, 85), rgb(34, 34, 34));border-radius: 0 0 6px 6px;}
 .panelBody{ width: 100%; height: 100%; position: relative;}
 
 .accountHeader {z-index: 10001;position: absolute;display: block;width: 100%;top: -50px;}
@@ -38,12 +39,14 @@ a{text-decoration: none;}
 
 .panel{ width: 100%;height: 100%;position: absolute;top: 0;left: 0;display: none;display: none;}
 .selectPanel{display: block;}
-.panelHeader{position:relative;width: 100%;height: 45px; border-radius: 6px 6px 0 0; background-image: linear-gradient(rgb(85, 85, 85), rgb(34, 34, 34));z-index: 100;}
+.panelHeader{position:relative;width: 100%;height: 45px; border-radius: 6px 6px 0 0; background-image: -webkit-linear-gradient(rgb(85, 85, 85), rgb(34, 34, 34));z-index: 100;}
 
 .panelTitle{width: 230px;height: 18px; padding: 13.5px 30px 13.5px 20px;font-weight: 400;font-size: 18px;line-height: 100%;text-align: center;font-family: 微软雅黑;color: #fff;}
+.close{display: none; top: 35%;right: 20px; width: 25px;height: 21px;position: absolute;background-image: url("images/chacha.png");}
 
 
-.panelBodyWrapper{ top:45px; position:absolute;left: 0;width: 100%;bottom: 0;}
+
+.panelBodyWrapper{ top:45px; position:absolute;left: 0;width: 100%;bottom: 0;overflow: auto;}
 .panelBodyWrapperBox{ width: 100%; min-height: 100%;position: relative;}
 .currentChatScrollArea{ width: 100%;position: absolute;top: 0;left: 0;bottom: 0;overflow: hidden;}
 .currentChatList{ width: 100%;position: relative;box-sizing: border-box;background: #fff;box-shadow: 0 1px rgba(255,255,255,0.7);overflow: auto;height: 100%;}
@@ -51,16 +54,73 @@ a{text-decoration: none;}
 .avatar{ width: 40px; height: 40px;display: block;float: left;margin: 8px;position: relative;}
 .memberNick{ width: auto;height: 23px; line-height: 23px;padding: 6px 0 0 5px;font-family: 微软雅黑;font-size: 16px;color: #000;overflow: hidden;}
 .memberMsg{ overflow: hidden;font-size: 12px;color: #aaa;line-height: 28px;padding-left: 5px;text-align: left;font-family: 微软雅黑;}
+.lastChat{ overflow: hidden;font-size: 12px;color: #aaa;line-height: 28px;padding-left: 5px;text-align: left;font-family: 微软雅黑;}
 .memberNick span{color: #aaa;line-height: 17px;font-size: 12px;}
 
-.memberTab{font-size:16px;font-family: 微软雅黑;  width: 100%; height: 39px;display: block; background: #fff;box-shadow: inset 0 0 1px #cdcdcd,0 1px 1px #fbfbfb;}
-.memberTabLi{text-align: center; box-sizing:border-box; display: block;float: left; border-bottom: 2px solid #ccc;width: 33.33%;padding: 0.65em 12px;-webkit-box-shadow: 10px 0 0 -9px #ccc;box-shadow: 10px 0 0 -9px #ccc;cursor: pointer;}
-.memberTabNew{ width: 100%;top: 39px; bottom: 0;display: block;position: absolute;}
-.memberTNBox{  width: 100%; height: 100%;display: block;position: absolute;top: 0;bottom: 0;left: 0;overflow: hidden;}
-.memberTNBU{width: 100%;height: 100%;position: relative;overflow: auto;box-shadow: 0 1px rgba(255,255,255,0.7);box-sizing:border-box;}
 
 
-.selectLi{ border-bottom-color: #0aa7ff;color: #0aa7ff; }
+
+.memberTab{font-family: 微软雅黑;  width: 100%; height: 39px;display: block; background: #fff;box-shadow: inset 0 0 1px #cdcdcd,0 1px 1px #fbfbfb;}
+.memberTabLi{text-align: center; box-sizing:border-box;-webkit-box-sizing:border-box; display: inline-block;float: left; border-bottom: 2px solid #ccc;width: 33.33%;padding: 0.65em 12px;-webkit-box-shadow: 10px 0 0 -9px #ccc;box-shadow: 10px 0 0 -9px #ccc;cursor: pointer; height: 100%;line-height: 16px; font-size: 16px;}
+.memberTabNew{ width: 100%;top: 39px; bottom: 0;display: block;position: absolute; background-color: gray;}
+.memberTNBox{  width: 100%; height: 100%;display: block;position: absolute;top: 0;bottom: 0;left: 0;overflow: hidden;display: none;}
+.memberTNBU{z-index: 1; width: 100%;height: 100%;position: relative;overflow: auto;box-shadow: 0 1px rgba(255,255,255,0.7);box-sizing:border-box;background-color: #fff;}
+.memberTNBULiGroup{ width: 100%;height:auto;display: list-item;cursor: pointer;}
+.memberTNBULiGroupD{box-sizing:border-box; position: relative;width: 100%;padding: .65em 28px .75em;background: url("../images/open_arrow.png") no-repeat 12px;background-size: 14px 14px;border-bottom: 1px solid #CCC;cursor: pointer;}
+.memberName{font-family: 微软雅黑;font-size: 16px;line-height: 16px;display: inline;height: 16px;}
+.memberNum{ font-family: 微软雅黑;font-size: 12px; line-height: 20px;float: right;color: gray;}
+.memberTNBULiM{display: none;}
+.selectmemberTabLi{ border-bottom-color: #0aa7ff;color: #0aa7ff; }
+.selectmemTNBox{display: block;}
+
+
+
+.pluginList{ width: 100%;height: auto;}
+.pluginList li{display: block;float: left; width: 93.33px;height: 93.33px;cursor: pointer;position: relative;background-color: #DADBE0;box-sizing: border-box;background-image: -webkit-linear-gradient(#E7E8EB,#DADBE0 50%,#C7CBD2 75%,#D3D6DB 95%,#D3D6DD);border: 1px solid #ECEEF2;border-bottom-color: #C1C7D2;border-right-color: #C1C7D2;}
+.pluginListicon{display: block;position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: no-repeat center 18%;background-size: 60%;}
+.qzoneicon{background-image: url("../images/plugin_icon_qzone.jpg");}
+.qemailicon{background-image: url("../images/plugin_icon_qmail.jpg");}
+.qwebicon{background-image: url("../images/plugin_icon_qq_portal.png");}
+.pluginList a{font-family: 微软雅黑;color: #000; position: absolute;bottom: 6px;left: 0;display: block;width: 100%;height: 19px;line-height: 19px;font-size: 13px;text-align: center;}
+
+
+.panel4group{display: inline-block;padding: 10px;width: 100%;box-sizing:border-box;}
+.panel4row{line-height: 16px; font-family: 微软雅黑;font-size: 16px; padding: 10px;border-radius: 5px;border: 1px solid #AFC8E2;background-color: #fff;display: inline-block;width: 100%;box-sizing:border-box;}
+.panel4rowS{ cursor: pointer;}
+.rowPic{display: inline-block;float: left;}
+.rowName{ padding: 5px 0 0 5px;width: 60%;float: left;}
+.rowNameUp{ width: 100%;font-size: 22px;line-height: 1.4em;font-family: 微软雅黑;color: #000;display: block;}
+.rowNameDown{ width: 100%;font-size: 14px;line-height: 14px;font-family: 微软雅黑;color: #666;display: block;}
+.rowSet{ position: relative;float: left;height: 20px;margin-top: 30px;font-size: 12px;cursor: pointer; }
+.rowSetLi{display: block;width: 10px;height: 10px;background-image: url("../images/state_sprite.gif");background-repeat: no-repeat;float: left;margin-right: 2px;}
+.rowSetL{ background-position: 0 0;}
+.rowSetR{ background-position: -162px 4px;}
+.rowSetC{display: none; ;position: absolute;border: 1px solid black;top: 20px;left: -40px;background: white;width: 70px;border-radius: 5px;}
+.rowSetCLi{border-radius: 5px;display: list-item;box-sizing:border-box; width: 100%; padding: 5px 3px; cursor: pointer;font-size: 12px;font-family: 微软雅黑;color: #000;line-height: 12px;float: left;}
+.rowSetCLi:hover {background: #CFF7FF;}
+.rowSetCLi span{ width: 10px; height: 10px; display: block; background-image: url("../images/state_sprite.gif");background-repeat: no-repeat;margin-right: 2px;float: left;}
+.online_icon{background-position: 0 0;}
+.callme_icon{background-position: -72px 0;}
+.away_icon{background-position: -18px 0;}
+.busy_icon{background-position: -36px 0;}
+.silent_icon{background-position: -108px 0;}
+.hidden_icon{background-position: -54px 0;}
+.offline_icon{background-position: -90px 0;}
+
+
+.panel4row2S{color: #666;float: left;width: 80px;line-height: 22px;}
+.panel4row2S2{ line-height: 22px;}
+.aboutQQ1S{color: #666;float: left;width: 80px;line-height: 16px;}
+.moreIcon{ cursor: pointer; display: block; float: right;width: 16px;height: 16px;background: url("../images/open_arrow.png") no-repeat center;background-size: 100% 100%;margin-left: 10px;}
+.aboutQQ{display: none;}
+.aboutQQClick{cursor: pointer;}
+.aboutQQ1{ border-bottom-left-radius: 0;border-bottom-right-radius: 0; line-height: 16px;font-size: 16px; }
+.aboutQQ2{border-radius: 0; border-top: 0;border-bottom: 0;}
+.aboutQQ3{border-top-left-radius: 0;border-top-right-radius: 0; }
+.loginout{cursor: pointer; text-shadow: 0 0 10px #969696;color: white;text-align: center;background-image: -webkit-linear-gradient(top, #F74634, #CE2715);}
+
+
+
 /*panel切换*/
 #navTab{ width: 100%;height: 100%;display: block;}
 .navTHead{ width: 100%;height: 100%;display: block;}
@@ -68,7 +128,7 @@ a{text-decoration: none;}
 #navTab #session{ width: 68px; height: 100%;color: #fff;float: left;border-left: 0;border-radius: 0 0 0 6px;}
 #navTab #contact{ width: 70px; height: 100%;color: #fff;float: left;}
 #navTab #plugin{ width: 68px; height: 100%;color: #fff;float: left;}
-#navTab #setting{ width: 68px; height: 100%;color: #fff;float: left;border-right: 0;border-radius: 0 6px 0 0;}
+#navTab #setting{ width: 68px; height: 100%;color: #fff;float: left;border-right: 0;border-radius: 0 0 6px 0;}
 #navTab .navSelected{background: #333;border-left-color: #222;color: #fff;text-shadow: 0 1px 0 #000;-webkit-box-shadow: inset 0 0 10px #111;box-shadow: inset 0 0 10px #111;}
 #navTab li a{display: inline-block;overflow: hidden;height: 100%;position: relative;text-align: center;}
 .icon{ display: inline-block;width: 34px;height: 34px;background-size: 100% 100%; }
@@ -77,6 +137,9 @@ a{text-decoration: none;}
 #contact .icon{background-image: url("../images/tab_icon_contact.png");}
 #plugin .icon{background-image: url("../images/tab_icon_plugin.png");}
 #setting .icon{background-image: url("../images/tab_icon_setup.png");}
+
+#session a{background-size: 12px 12px; background-repeat: no-repeat;background-position: 22px 2px;}
+
 
 /*#navTab .navSelected .icon{background-image: url("../images/tab_icon_conversation_selected.png");}*/
 
@@ -95,13 +158,13 @@ a{text-decoration: none;}
 .suggestion a{font-family: 微软雅黑;font-size: 12px;color: #fff;line-height: 12px;display: block;}
 
 
-/*Left end*/
+/*整体左边 end*/
 
-/*Right*/
+/*整体右边*/
 #container{width: 700px; height: 100%; margin-left: 20px;float: left;position: relative;} 
-.chatPanel{ width: 100%;height: 80%;top: 12%;left: 0;position: absolute;}
+.chatPanel{ width: 100%;height: 80%;top: 12%;left: 0;position: absolute;outline:none;}
 
-.chatHeader{width: 100%;height: 45px; border-radius: 6px 6px 0 0;position: relative; background-image: linear-gradient(rgb(85, 85, 85), rgb(34, 34, 34));}
+.chatHeader{width: 100%;height: 45px; border-radius: 6px 6px 0 0;position: relative; background-image: -webkit-linear-gradient(rgb(85, 85, 85), rgb(34, 34, 34));}
 .chatHeaderLeftButton{width: 51px;height: 19px;padding: 6px 10px;border:1px solid;border-radius: 5px;margin: 5px 0 7px 15px;float: left;position: relative;cursor: pointer; }
 .chatHeaderLeftButtonI{ width: 14px; height: 14px; margin: 0 4px;display: block;background-image: url("../images/pannel-arrow-down.png");background-size: 100% 100%;}
 
@@ -110,23 +173,63 @@ a{text-decoration: none;}
 .chatHeaderRightButtonI{ max-width: 100px; width: auto; height: 14px; line-height: 18px;  text-align: center; display: block;font-family: 微软雅黑;font-size: 14px;color: #fff;}
 
 .chatBodyWrapper{ width: 100%;position: absolute;top: 45px; bottom: 50px; left: 0;height: auto;}
-.chatBodyBox{  width: 100%; height: 100%;position: relative;background-image: linear-gradient(rgb(255, 255, 255), rgb(241, 241, 241));}
+.chatBodyBox{  width: 100%; height: 100%;position: relative;background-image: -webkit-linear-gradient(rgb(255, 255, 255), rgb(241, 241, 241));overflow: auto;}
 .chatTime{ text-align: center;width: 100%; height: 37px; }
 .chatTime span{color: rgba(255,255,255,0.8);background: rgba(0,0,0,0.3);padding: 2px 8px;display: inline-block;margin: 10px;font-size: 13px;border-radius: 8px;font-family: 微软雅黑;}
-.chatContentSelf{text-align: right;padding: 10px;width: 680px;height: 86px;}
-.chatContentOther{text-align: left;padding: 10px;width: 680px;height: 86px;}
+.chatContentSelf{text-align: right;padding: 10px;width: 95%;height: 86px;}
+.chatContentOther{text-align: left;padding: 10px;width: 95%;height: 86px;}
 .chatContentSelf .avatarImg{ width: 40px; height: 40px;margin-left: 10px;float: right;}
 .chatContentOther .avatarImg{ width: 40px; height: 40px;margin-right: 10px;float: left;}
 .chatContentSelf .chatNick{font-size: 14px;margin: 0 0 10px;width: 100%;height: 14px;line-height: 14px;font-family: 微软雅黑;text-align: right;}
 .chatContentOther .chatNick{font-size: 14px;margin-left: 10px; margin-bottom: 10px; width: 100%;height: 14px;line-height: 14px;font-family: 微软雅黑;text-align: left;}
-.chatContent{ font-family: 微软雅黑; display: inline-block;min-height: 16px;max-width: 50%;background: #97c94c;border-radius: 5px;padding: 10px 15px;word-break: break-all;box-shadow: 1px 1px 5px #000;line-height: 1.4; background-image: linear-gradient(rgb(204, 255, 153), rgb(153, 204, 51));}
+.chatContent{ font-family: 微软雅黑; display: inline-block;min-height: 16px;max-width: 50%;background: #97c94c;border-radius: 5px;padding: 10px 15px;word-break: break-all;box-shadow: 1px 1px 5px #000;line-height: 1.4; background-image: -webkit-linear-gradient(rgb(204, 255, 153), rgb(153, 204, 51));}
 
 
-.chatFooter{ width: 100%; height: 50px; position: absolute; left: 0;bottom: 0;border-radius: 0 0 6px 6px;background-image: linear-gradient(rgb(85, 85, 85), rgb(34, 34, 34));display:box;}
+.pannelMenuList{position: absolute;width: 100%;height: 80px;left: 0;top: 45px;overflow: hidden;background: #3C3C3C;box-shadow: #141111 0 2px 5px;display: none;}
+.pannelMenuList li {height: 80px;width: 80px;text-align: center;float: left;font-size: 12px;border-right: 1px solid #222;border-left: 1px solid #555;cursor: pointer;color: white;background-image: -webkit-linear-gradient(top, #4E4E4E, #2C2C2C);font-family: 微软雅黑;}
+.menuListIcon{width: 40px;height: 40px;margin: 10px auto 5px;background-image: url("images/menu_icons.png");background-repeat: no-repeat;}
+.menuListIcon1{background-position: -128px 3px;}
+.menuListIcon2{background-position: -43px 2px;}
+.menuListIcon3{background-position: -90px 2px;}
+
+
+
+
+
+
+.chatFooter{ width: 100%; height: 50px; position: absolute; left: 0;bottom: 0;border-radius: 0 0 6px 6px;background-image: -webkit-linear-gradient(rgb(85, 85, 85), rgb(34, 34, 34));display:box;}
 .chatToolbar{ width: 100%; height: 100%;padding: 3px 10px 5px 6px;box-sizing: border-box;}
 .addFaceBtn{width: 38px; height: 32px; padding: 5px;display: block; float: left;}
 .btnImg{ width: 30px; height: 30px; margin: 0 4px; display: block;background-image: url("../images/chat_bottombar_icon_face.png");background-size: 100% 100%;}
-.chatTextarea{float: left; box-shadow: inset 0 1px 4px rgba(0,0,0,0.2); max-width: 570px; box-sizing: border-box; width: 100%; display: block;border-radius: 5px; resize: none; padding: 5px 10px;height: 32px;margin: 5px 10px 5px 6px;max-height: 80px;overflow: hidden; }
+.chatTextarea{outline:none;float: left; box-shadow: inset 0 1px 4px rgba(0,0,0,0.2); max-width: 570px; box-sizing: border-box; width: 100%; display: block;border-radius: 5px; resize: none; padding: 5px 10px;height: 32px;margin: 5px 10px 5px 6px;max-height: 80px;overflow: hidden; }
 .sendBtn{ margin: 2px 0; width: 50px;height: 38px; box-sizing: border-box; padding: 6px 10px; cursor: pointer;display: block;float: left;background: -webkit-linear-gradient(top,#5f9cc5,#396b9e);text-shadow: 0 1px 1px #194b7e;position: relative;border: 1px solid #044062;border-radius: 5px;text-align: center;}
 .sendBtn span{ font-family: 微软雅黑; line-height: 24px; font-size: 14px;color: #fff;}
-/*Right end*/
+
+
+.panelNotifySetting{width: 100%;height: 80%;top: 12%;left: 0;position: absolute;display: none;z-index: 3;}
+.panelSetHeader{width: 100%;height: 45px; border-radius: 6px 6px 0 0;position: relative; background-image: -webkit-linear-gradient(rgb(85, 85, 85), rgb(34, 34, 34));}
+.panelSetHeaderButton{  margin: 5px 0 7px 25px;padding: 6px 10px;-webkit-border-radius: 0 5px 5px 0;width: 57px;height: 19px; font-size: 14px;vertical-align: middle;border-color: #2C2727 #2C2727 #1A1919;position: relative;border: 1px solid;float: left;z-index:2;background-image: -webkit-linear-gradient(top, #555, #222);}
+.panelSetHeaderButtonI{display: block; max-width: 100px; width: 100%;font-size: 100%;font-family: 微软雅黑; line-height: 100%;color: #fff;text-align: center;}
+.panelSetHeaderButtonL{cursor: pointer;border: 1px solid;background: -webkit-gradient(linear,left top,right bottom,from(#555),to(#222));display: block;position: absolute;-webkit-transform: rotate(45deg);transform: rotate(45deg);z-index:1;width: 23px;height: 23px;left: 13px;top: 9px;-webkit-border-radius: 3px;border-radius: 3px;-webkit-box-shadow: inset 1px 0 rgba(255, 255, 255, .1),0 1px rgba(255, 255, 255, 0.1);}
+.panelSetHeaderButtonS{border-left-width: 0;cursor: pointer;}
+.panelNotifySet{display: block; width:547px; height: 18px;padding: 13.5px 30px 13.5px 20px;float: left;text-align: center;font-family: 微软雅黑;font-size: 18px;color: #fff;line-height: 18px;font-weight: normal;}
+
+
+.panelNotifySetBody{ position: absolute;left: 0;width: 100%;bottom: 0;top: 45px;overflow: hidden;}
+.panelNotifySetBodyBox{ width: 100%;min-height: 100%;position: relative;background: #EDEDED;border-radius: 0 0 6px 6px;}
+
+
+.panelNSBBgroup{display: inline-block;padding: 10px;width: 100%;box-sizing:border-box;}
+.panelNSBBgroupRow{ line-height: 16px; font-family: 微软雅黑;font-size: 16px; padding: 10px;border-radius: 5px;border: 1px solid #AFC8E2;background-color: #fff;display: inline-block;width: 100%;box-sizing:border-box;}
+.panelNSBBgroupRowU{ border-bottom-left-radius: 0;border-bottom-right-radius: 0;}
+.panelNSBBgroupRowD{ border-top-left-radius: 0;border-top-right-radius: 0; border-top: 0px;}
+
+.panelNSBBgroupC{line-height: 16px; font-family: 微软雅黑;font-size: 16px;color: #666;width: 80px;}
+.switch{display: inline-block;width: 56px;height: 24px;position: relative;float: right;}
+.switch input{background-image: -webkit-linear-gradient(top, #D0D0D0, #DFDFDF);-webkit-appearance: none; margin: 0;width: 100%;height: 100%;-webkit-border-radius: 96px;border-radius: 96px;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: pointer;outline: none;}
+.switch  span{background-image: -webkit-linear-gradient(top, white, #F1F1F1);position: absolute;top: 50%;left: 1.9em;margin-top: -.7em;width: 1.4em;height: 1.4em;-webkit-border-radius: 1.6em;border-radius: 1.6em;-webkit-transition: left .1s linear;transition: left 0.1s linear;pointer-events: none;}
+.switch input:checked{background-image: -webkit-linear-gradient(#5393C5,#6FACD5);background-image: linear-gradient(#5393C5,#6FACD5);}
+.switch input:checked ~ span{left: 0.21em;}
+.panelNSBBgroupRB{ display: inline-block;width: 100%;}
+.tips{ color: #666;cursor: default;}
+/*整体右边 end*/

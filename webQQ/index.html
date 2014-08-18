@@ -3,8 +3,10 @@
 <head>
 	<title>this is webQQ</title>
 	<meta http-equiv="content-Type"  content="text/html" charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 </head>
 
@@ -12,6 +14,7 @@
 	<div id="bgAllImage">
 		<img class="bgAllImage" src="css/images/1.jpg">
 	</div>
+	<div class="draggableBox"></div>
 	<div class="wrap">
 		<div class="mainContainer">
 			<div class="mainPanel">
@@ -45,99 +48,32 @@
 							<div class="panelBodyWrapper">
 								<div class="panelBodyWrapperBox">
 									<div class="currentChatScrollArea">
-										<ul class="currentChatList">
-											<li class="listItem Ltqq1" showchatPanel="false">
+										<ul class="currentChatList currentChatScrollAreaList">
+											<!-- <li class="listItem Ltqq20" showchatPanel="false" isshow="false">
 												<a href="#" class="avatar">
 													<img src="images/getface.jpg">
 												</a>
 												<p class="memberNick">嘿柠檬树嘿</p>
-												<p class="memberMsg">Lemon Tree</p>
+												<span class="lastChat">威武</span>
+												<div class="close" title="结束会话，聊天记录会消失哦"></div>
 											</li>
-											<li class="listItem Ltqq2" showchatPanel="false">
+											<li class="listItem Ltqq21" showchatPanel="false" isshow="false">
 												<a href="#" class="avatar">
 													<img src="images/getface.jpg">
 												</a>
-												<p class="memberNick">范朝阳
-													<span>(紙筆寫童話)</span>
-												</p>
+												<p class="memberNick">1</p>
+												<span class="lastChat">威武</span>
+												<div class="close" title="结束会话，聊天记录会消失哦"></div>
 											</li>
-											<li class="listItem Ltqq3" showchatPanel="false">
-												<a href="#" class="avatar">
-													<img src="images/g.jpg">
-												</a>
-												<p class="memberNick">李浩宇
-													<span>(。李小猫 。)</span>
-												</p>
-											</li>
-											<li class="listItem Ltqq4" showchatPanel="false">
+											<li class="listItem Ltqq22" showchatPanel="false" isshow="false">
 												<a href="#" class="avatar">
 													<img src="images/getface.jpg">
 												</a>
-												<p class="memberNick">范朝阳
-													<span>(紙筆寫童話)</span>
-												</p>
-											</li>
-											<li class="listItem Ltqq5" showchatPanel="false">
-												<a href="#" class="avatar">
-													<img src="images/getface.jpg">
-												</a>
-												<p class="memberNick">李浩宇</p>
-												<p class="memberMsg">http://ma.m.taobao.com/ejwoqh </p>
-											</li>
-											<li class="listItem Ltqq6" showchatPanel="false">
-												<a href="#" class="avatar">
-													<img src="images/getface.jpg">
-												</a>
-												<p class="memberNick">淮师CSDN高校俱乐部</p>
-												<p class="memberMsg">http://ma.m.taobao.com/ejwoqh </p>
-											</li>
-											<li class="listItem Ltqq7" showchatPanel="false">
-												<a href="#" class="avatar">
-													<img src="images/getface.jpg">
-												</a>
-												<p class="memberNick">淮师CSDN高校俱乐部</p>
-												<p class="memberMsg">http://ma.m.taobao.com/ejwoqh </p>
-											</li>
-											<li class="listItem Ltqq8" showchatPanel="false">
-												<a href="#" class="avatar">
-													<img src="images/g.jpg">
-												</a>
-												<p class="memberNick">李浩宇
-													<span>(。李小猫 。)</span>
-												</p>
-											</li>
-											<li class="listItem Ltqq9" showchatPanel="false">
-												<a href="#" class="avatar">
-													<img src="images/g.jpg">
-												</a>
-												<p class="memberNick">李浩宇
-													<span>(。李小猫 。)</span>
-												</p>
-											</li>
-											<li class="listItem Ltqq10" showchatPanel="false">
-												<a href="#" class="avatar">
-													<img src="images/g.jpg">
-												</a>
-												<p class="memberNick">李浩宇
-													<span>(。李小猫 。)</span>
-												</p>
-											</li>
-											<li class="listItem Ltqq11" showchatPanel="false">
-												<a href="#" class="avatar">
-													<img src="images/g.jpg">
-												</a>
-												<p class="memberNick">李浩宇
-													<span>(。李小猫 。)</span>
-												</p>
-											</li>
-											<li class="listItem Ltqq12" showchatPanel="false">
-												<a href="#" class="avatar">
-													<img src="images/g.jpg">
-												</a>
-												<p class="memberNick">李浩宇
-													<span>(。李小猫 。)</span>
-												</p>
-											</li>
+												<p class="memberNick">2</p>
+												<span class="lastChat">威武</span>
+												<div class="close" title="结束会话，聊天记录会消失哦"></div>
+											</li> -->
+											
 										</ul>
 									</div>
 								</div>
@@ -151,105 +87,156 @@
 								<div class="panelBodyWrapperBox">
 									<div class="currentChatScrollArea">
 										<ul class="memberTab">
-											<li class="memberTabLi selectLi">好友</li>
+											<li class="memberTabLi selectmemberTabLi">好友</li>
 											<li class="memberTabLi">群</li>
 											<li class="memberTabLi">讨论组</li>
 										</ul>
 										<ul class="memberTabNew">
-											<li class="memberTNBox">
-												<ul class="memberTNBU"></ul>
+											<li class="memberTNBox selectmemTNBox">
+												<ul class="memberTNBU">
+													<li class="memberTNBULiGroup">
+														<div class="memberTNBULiGroupD">
+															<span class="memberName">亲人</span>
+															<span class="memberNum">4/4</span>
+														</div>
+														<ul class="currentChatList memberTNBULiM" isshow="false">
+															<li class="listItem Ltqq1" showchatPanel="false" isshow="false">
+																<a href="#" class="avatar">
+																	<img src="images/getface.jpg">
+																</a>
+																<p class="memberNick">天</p>
+																<p class="memberMsg">宇</p>
+															</li>
+															<li class="listItem Ltqq2" showchatPanel="false" isshow="false">
+																<a href="#" class="avatar">
+																	<img src="images/getface.jpg">
+																</a>
+																<p class="memberNick">地</p>
+																<p class="memberMsg">宙</p>													
+															</li>
+															<li class="listItem Ltqq3" showchatPanel="false" isshow="false">
+																<a href="#" class="avatar">
+																	<img src="images/g.jpg">
+																</a>
+																<p class="memberNick">玄</p>
+																<p class="memberMsg">洪</p>
+															</li>
+															<li class="listItem Ltqq4" showchatPanel="false" isshow="false">
+																<a href="#" class="avatar">
+																	<img src="images/getface.jpg">
+																</a>
+																<p class="memberNick">黄</p>
+																<p class="memberMsg">荒</p>
+															</li>
+															
+														</ul>
+													</li>
+													<li class="memberTNBULiGroup">
+														<div class="memberTNBULiGroupD">
+															<span class="memberName">高中同学</span>
+															<span class="memberNum">3/3</span>
+														</div>
+														<ul class="currentChatList memberTNBULiM" isshow="false">
+															<li class="listItem Ltqq5" showchatPanel="false" isshow="false">
+																<a href="#" class="avatar">
+																	<img src="images/g.jpg">
+																</a>
+																<p class="memberNick">天道</p>
+																<p class="memberMsg">天地不仁以万物为刍狗</p>
+															</li>
+															<li class="listItem Ltqq6" showchatPanel="false" isshow="false">
+																<a href="#" class="avatar">
+																	<img src="images/getface.jpg">
+																</a>
+																<p class="memberNick">人间道</p>
+																<p class="memberMsg">人间自有真情在，没钱就吃大白菜</p>
+															</li>
+															<li class="listItem Ltqq7" showchatPanel="false" isshow="false">
+																<a href="#" class="avatar">
+																	<img src="images/getface.jpg">
+																</a>
+																<p class="memberNick">修罗道</p>
+																<p class="memberMsg">非天非地非端正，不神不鬼不酒神</p>
+															</li>
+														</ul>
+													</li>
+													<li class="memberTNBULiGroup">
+														<div class="memberTNBULiGroupD">
+															<span class="memberName">初中同学</span>
+															<span class="memberNum">3/3</span>
+														</div>
+														<ul class="currentChatList memberTNBULiM" isshow="false">
+															<li class="listItem Ltqq8" showchatPanel="false" isshow="false">
+																<a href="#" class="avatar">
+																	<img src="images/getface.jpg">
+																</a>
+																<p class="memberNick">畜生道</p>
+																<p class="memberMsg">一鱼，二鸟，三兽。</p>
+															</li>
+															<li class="listItem Ltqq9" showchatPanel="false" isshow="false">
+																<a href="#" class="avatar">
+																	<img src="images/getface.jpg">
+																</a>
+																<p class="memberNick">饿鬼道</p>
+																<p class="memberMsg">所谓饿鬼者，常饥虚，故谓之饿；恐怯多畏，故谓之鬼。</p>
+															</li>
+															<li class="listItem Ltqq10" showchatPanel="false" isshow="false"> 
+																<a href="#" class="avatar">
+																	<img src="images/getface.jpg">
+																</a>
+																<p class="memberNick">地狱道</p>
+																<p class="memberMsg" title="八大热地狱、八大寒地狱、近边地狱及孤独地狱">八大热地狱、八大寒地狱、近边地狱及孤独地狱</p>
+															</li>
+														</ul>
+													</li>
+													<li class="memberTNBULiGroup">
+														<div class="memberTNBULiGroupD">
+															<span class="memberName">大学同学</span>
+															<span class="memberNum">2/2</span>
+														</div>
+														<ul class="currentChatList memberTNBULiM" isshow="false">
+															<li class="listItem Ltqq11" showchatPanel="false" isshow="false">
+																<a href="#" class="avatar">
+																	<img src="images/getface.jpg">
+																</a>
+																<p class="memberNick">寒山</p>
+																<p class="memberMsg" title="昔日寒山问拾得曰：世间谤我、欺我、辱我、笑我、轻我、贱我、恶我、骗我、如何处治乎？">昔日寒山问拾得曰：世间谤我、欺我、辱我、笑我、轻我、贱我、恶我、骗我、如何处治乎？</p>
+															</li>
+															<li class="listItem Ltqq12" showchatPanel="false" isshow="false">
+																<a href="#" class="avatar">
+																	<img src="images/getface.jpg">
+																</a>
+																<p class="memberNick">拾得</p>
+																<p class="memberMsg" title="拾得云：只是忍他、让他、由他、避他、耐他、敬他、不要理他、再待几年你且看他。">拾得云：只是忍他、让他、由他、避他、耐他、敬他、不要理他、再待几年你且看他。</p>
+															</li>
+															
+															
+														</ul>
+													</li>
+												</ul>
 											</li>
 											<li class="memberTNBox">
 												<ul class="currentChatList">
-													<li class="listItem Ltqq1" showchatPanel="false">
+													<li class="listItem Ltqq13" showchatPanel="false" isshow="false">
 														<a href="#" class="avatar">
 															<img src="images/getface.jpg">
 														</a>
 														<p class="memberNick">柠檬树</p>
 														<p class="memberMsg">Lemon Tree</p>
 													</li>
-													<li class="listItem Ltqq2" showchatPanel="false">
+													<li class="listItem Ltqq14" showchatPanel="false" isshow="false">
 														<a href="#" class="avatar">
 															<img src="images/getface.jpg">
 														</a>
-														<p class="memberNick">范朝阳
-															<span>(紙筆寫童話)</span>
+														<p class="memberNick">安河桥
+															<span>(宋冬野)</span>
 														</p>
 													</li>
-													<li class="listItem Ltqq3" showchatPanel="false">
+													<li class="listItem Ltqq15" showchatPanel="false" isshow="false">
 														<a href="#" class="avatar">
 															<img src="images/g.jpg">
 														</a>
-														<p class="memberNick">李浩宇
-															<span>(。李小猫 。)</span>
-														</p>
-													</li>
-													<li class="listItem Ltqq4" showchatPanel="false">
-														<a href="#" class="avatar">
-															<img src="images/getface.jpg">
-														</a>
-														<p class="memberNick">范朝阳
-															<span>(紙筆寫童話)</span>
-														</p>
-													</li>
-													<li class="listItem Ltqq5" showchatPanel="false">
-														<a href="#" class="avatar">
-															<img src="images/getface.jpg">
-														</a>
-														<p class="memberNick">李浩宇</p>
-														<p class="memberMsg">http://ma.m.taobao.com/ejwoqh </p>
-													</li>
-													<li class="listItem Ltqq6" showchatPanel="false">
-														<a href="#" class="avatar">
-															<img src="images/getface.jpg">
-														</a>
-														<p class="memberNick">淮师CSDN高校俱乐部</p>
-														<p class="memberMsg">http://ma.m.taobao.com/ejwoqh </p>
-													</li>
-													<li class="listItem Ltqq7" showchatPanel="false">
-														<a href="#" class="avatar">
-															<img src="images/getface.jpg">
-														</a>
-														<p class="memberNick">淮师CSDN高校俱乐部</p>
-														<p class="memberMsg">http://ma.m.taobao.com/ejwoqh </p>
-													</li>
-													<li class="listItem Ltqq8" showchatPanel="false">
-														<a href="#" class="avatar">
-															<img src="images/g.jpg">
-														</a>
-														<p class="memberNick">李浩宇
-															<span>(。李小猫 。)</span>
-														</p>
-													</li>
-													<li class="listItem Ltqq9" showchatPanel="false">
-														<a href="#" class="avatar">
-															<img src="images/g.jpg">
-														</a>
-														<p class="memberNick">李浩宇
-															<span>(。李小猫 。)</span>
-														</p>
-													</li>
-													<li class="listItem Ltqq10" showchatPanel="false">
-														<a href="#" class="avatar">
-															<img src="images/g.jpg">
-														</a>
-														<p class="memberNick">李浩宇
-															<span>(。李小猫 。)</span>
-														</p>
-													</li>
-													<li class="listItem Ltqq11" showchatPanel="false">
-														<a href="#" class="avatar">
-															<img src="images/g.jpg">
-														</a>
-														<p class="memberNick">李浩宇
-															<span>(。李小猫 。)</span>
-														</p>
-													</li>
-													<li class="listItem Ltqq12" showchatPanel="false">
-														<a href="#" class="avatar">
-															<img src="images/g.jpg">
-														</a>
-														<p class="memberNick">李浩宇
+														<p class="memberNick">李小宇
 															<span>(。李小猫 。)</span>
 														</p>
 													</li>
@@ -263,33 +250,142 @@
 								</div>
 							</div>
 						</div>
-						<div class="panel" id="panel3"></div>
-						<div class="panel" id="panel4"></div>
+						<div class="panel" id="panel3">
+							<header class="panelHeader">
+								<h1 class="panelTitle">发现</h1>
+							</header>
+							<div class="panelBodyWrapper">
+								<div class="panelBodyWrapperBox">
+									<ul class="pluginList">
+										<li>
+											<span class="pluginListicon qzoneicon"></span>
+											<a href="##">QQ空间</a>
+										</li>
+										<li>
+											<span class="pluginListicon qemailicon"></span>
+											<a href="##">QQ邮箱</a>
+										</li>
+										<li>
+											<span class="pluginListicon qwebicon"></span>
+											<a href="##">腾讯网 </a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="panel" id="panel4">
+							<header class="panelHeader">
+								<h1 class="panelTitle">设置</h1>
+							</header>
+							<div class="panelBodyWrapper">
+								<div class="panelBodyWrapperBox">
+									<div class="panel4group">
+										<div class="panel4row">
+											<div class="rowPic">
+												<img class="avatar" src="images/g (1).jpg">
+											</div>
+											<div class="rowName">
+												<span class="rowNameUp">六道</span>
+												<span class="rowNameDown">416333021</span>
+											</div>
+											<div class="rowSet">
+												<li class="rowSetLi rowSetL"></li>
+												<li class="rowSetLi rowSetR"></li>
+												<ul class="rowSetC" isshow="false">
+													<li class="rowSetCLi">
+														<span class="rowSetCLiIcon online_icon"></span>在线
+													</li>
+													<li class="rowSetCLi">
+														<span class="rowSetCLiIcon callme_icon"></span>Q我
+													</li>
+													<li class="rowSetCLi">
+														<span class="rowSetCLiIcon away_icon"></span>离开
+													</li>
+													<li class="rowSetCLi">
+														<span class="rowSetCLiIcon busy_icon"></span>忙碌
+													</li>
+													<li class="rowSetCLi">
+														<span class="rowSetCLiIcon silent_icon"></span>静音
+													</li>
+													<li class="rowSetCLi">
+														<span class="rowSetCLiIcon hidden_icon"></span>隐身
+													</li>
+													<li class="rowSetCLi">
+														<span class="rowSetCLiIcon offline_icon"></span>离线
+													</li>
+												</ul>
+
+											</div>
+										</div>
+
+									</div>	
+
+									<div class="panel4group">
+										<div class="panel4row">
+											<span class="panel4row2S">个性签名：</span>
+											<span class="panel4row2S2">最初的梦想</span>
+										</div>
+									</div>	
+									<div class="panel4group">
+										<div class="panel4row panel4rowS">
+											消息相关设置
+											<span class="moreIcon"></span>
+										</div>
+									</div>	
+									<div class="panel4group">
+										<div class="panel4row aboutQQClick">
+											关于QQ
+											<span class="moreIcon"></span>
+										</div>
+									</div>
+									<div class="panel4group aboutQQ" isshow="false">
+										<div class="panel4row aboutQQ1">
+											<span class="aboutQQ1S">当前版本：</span>
+											V1.0
+										</div>
+										<div class="panel4row aboutQQ2">
+											服务条款
+										</div>
+										<div class="panel4row aboutQQ3">
+											帮助与反馈
+											<span class="moreIcon"></span>
+										</div>
+									</div>
+
+									<div class="panel4group">
+										<div class="panel4row loginout">
+											退出当前帐号
+										</div>
+									</div>	
+
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<footer class="panelFooter" >
 					<nav id="navTab">
 						<ul class="navTHead">
 							<li id="session" class="nav navSelected" num="1">
-								<a href="#">
+								<a href="##">
 									<div class="icon"></div>
 									<span>会话</span>
 								</a>
 							</li>
 							<li id="contact" class="nav" num="2">
-								<a href="#">
+								<a href="##">
 									<div class="icon"></div>
 									<span>联系人</span>
 								</a>
 							</li>
 							<li id="plugin" class="nav" num="3">
-								<a href="#">
+								<a href="##">
 									<div class="icon"></div>
 									<span>发现</span>
 								</a>
 							</li>
 							<li id="setting" class="nav" num="4">
-								<a href="#">
+								<a href="##">
 									<div class="icon"></div>
 									<span>设置</span>
 								</a>
@@ -307,14 +403,15 @@
 			</div>
 		</div>
 		<div id="container">
-			<!-- <div class="chatPanel">
+
+			<!-- <div class="chatPanel" tabindex="-1">
 				<div class="chatHeader">
 					<div class="chatHeaderLeftButton">
 						<span class="chatHeaderLeftButtonI"></span>
 					</div>
 					<h1 class="chatTitle">俱乐部</h1>
-					<div class="chatHeaderRightButton">
-						<span class="chatHeaderRightButtonI">关闭</span>
+					<div class="chatHeaderRightButton" title="隐藏到会话栏">
+						<span class="chatHeaderRightButtonI" >隐藏</span>
 					</div>
 				</div>
 				<div class="chatBodyWrapper">
@@ -336,45 +433,87 @@
 						</div>
 					</div>
 				</div>
+				<ul class="pannelMenuList" isshow="false">
+					<li>
+						<div class="menuListIcon menuListIcon1"></div>
+						QQ空间
+					</li>
+					<li>
+						<div class="menuListIcon menuListIcon2"></div>
+						详细资料
+					</li>
+					<li>
+						<div class="menuListIcon menuListIcon3"></div>
+						聊天记录
+					</li>
+				</ul>
 				<div class="chatFooter">
 					<div class="chatToolbar">
-						<div class="addFaceBtn">
+						<div class="addFaceBtn" title="时间不太够啊">
 							<span class="btnImg"></span>
 						</div>
-						<textarea class="chatTextarea"></textarea>
+						<textarea class="chatTextarea" ></textarea>
 						<button class="sendBtn">
 							<span>发送</span>
 						</button>
 					</div>
 				</div>
 			</div> -->
-			<!-- <div class="chatPanel">
-				<div class="chatHeader">
-					<div class="chatHeaderLeftButton">
-						<span class="chatHeaderLeftButtonI"></span>
+
+
+			<div class="panelNotifySetting">
+				<div class="panelSetHeader">
+					<div class="panelSetHeaderButtonL panelSetHeaderB"></div>
+					<div class="panelSetHeaderButton panelSetHeaderButtonS panelSetHeaderB">
+						<span class="panelSetHeaderButtonI">设置</span>
 					</div>
-					<h1 class="chatTitle">阿</h1>
-					<div class="chatHeaderRightButton">
-						<span class="chatHeaderRightButtonI">关闭</span>
-					</div>
+					<h1 class="panelNotifySet">消息相关设置</h1>
 				</div>
-				<div class="chatBodyWrapper">
-					<div class="chatBodyBox">
-					</div>
-				</div>
-				<div class="chatFooter">
-					<div class="chatToolbar">
-						<div class="addFaceBtn">
-							<span class="btnImg"></span>
+				<div class="panelNotifySetBody">
+					<div class="panelNotifySetBodyBox">
+						<div class="panelNSBBgroup">
+							<div class="panelNSBBgroupRow panelNSBBgroupRowU">
+								<span class="panelNSBBgroupC">声音</span>
+								<div class="switch">
+									<input type="checkbox">
+									<span></span>
+								</div>
+							</div>
+							<div class="panelNSBBgroupRow panelNSBBgroupRowD">
+								<span class="panelNSBBgroupC">消息浮窗</span>
+								<div class="switch">
+									<input type="checkbox">
+									<span></span>
+								</div>
+							</div>
 						</div>
-						<textarea class="chatTextarea"></textarea>
-						<button class="sendBtn">
-							<span>发送</span>
-						</button>
+						<div class="panelNSBBgroup">
+							<div class="panelNSBBgroupRow">
+								<div class="panelNSBBgroupRB">
+									<span class="panelNSBBgroupC">HTTPS</span>
+									<div class="switch">
+										<input type="checkbox">
+										<span></span>
+									</div>
+								</div>
+								<div class="tips">使用 HTTPS 加密聊天内容</div>
+							</div>
+						</div>
+						<div class="panelNSBBgroup">
+							<div class="panelNSBBgroupRow">
+								<div class="panelNSBBgroupRB">
+									<span class="panelNSBBgroupC">按Ctrl+Enter键发送消息</span>
+									<div class="switch">
+										<input type="checkbox">
+										<span></span>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div> -->
+		</div>
 	</div>
 </body>
 </html>
