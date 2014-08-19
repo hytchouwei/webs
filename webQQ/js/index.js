@@ -24,6 +24,16 @@ $(function(){
 	//$(".black").css("height",$(window).height());
 	
 	//$(".chatPanel").draggable({containment:".draggableBox"});
+
+
+	$(document).on("click",".facemenu i",function(){
+		var content = $(this).parent().parent().parent().find(".chatTextarea").val();
+		content += ("["+$(this).attr("title")+"]");
+		$(this).parent().parent().parent().find(".chatTextarea").val(content);
+	});
+
+
+
 	//拖动
 	$(".currentChatScrollAreaList").sortable({ revert:true,axis:"y"});
 	$('.chatI').draggable({
@@ -175,6 +185,37 @@ $(function(){
 		
 
 		
+	});
+	//键盘发送
+	$(document).keyup(function(e){
+	    if (e.keyCode == 13) //enter键的ascII码为13
+	    {
+	    	$(".sendBtn").trigger("click");
+	    }
+	});
+
+	//弹出表情框
+	$(document).on("click",".addFaceBtn",function(){
+
+		if($(this).parent().parent().find(".facemenu").attr("isshow")=="false")
+		{
+			$(".facemenu").fadeIn();
+			$(this).parent().parent().find(".facemenu").attr("isshow","true");
+		}
+		else
+		{
+			$(".facemenu").fadeOut();
+			$(this).parent().parent().find(".facemenu").attr("isshow","false");
+		}
+		
+	});
+
+	//删除字符
+	$(document).on("click",".delKey",function(){
+		var content = $(this).parent().parent().parent().find(".chatTextarea").val();
+		var contentNewLength = content.length-9;
+		var contentNew = content.substring(0,contentNewLength);
+		$(this).parent().parent().parent().find(".chatTextarea").val(contentNew);
 	});
 
 	//下拉小菜单
@@ -363,6 +404,20 @@ function addChatPanel(num,name){
 	html+='					</li>';
 	html+='				</ul>';
 	html+='				<div class="chatFooter">';
+	html+='					<ul class="facemenu" isshow="false">';
+	html+='						<li class="faceIteam">';
+	html+='					        <i title="微笑"  num="1"></i>';
+	html+='					        <i title="撇嘴" num="2"></i>';
+	html+='					        <i title="色" num="3"></i>';
+	html+='					        <i title="发呆" num="4"></i>';
+	html+='					        <i title="得意" num="5"></i>';
+	html+='					        <i title="流泪" num="6"></i>';
+	html+='					        <i title="害羞" num="7"></i>';
+	html+='					        <i title="闭嘴" num="8"></i>';
+	html+='					        <i title="睡" num="9"></i>';
+	html+='					        <i title="delKey"  class="delKey"></i>';
+	html+='        				</li>';
+	html+='					</ul>';
 	html+='					<div class="chatToolbar">';
 	html+='						<div class="addFaceBtn" title="时间不太够啊">';
 	html+='							<span class="btnImg"></span>';
@@ -394,12 +449,30 @@ function showTime(n){
 
 //发送消息
 function send(n,c){
+	var content=c;
+
+	for( var i=0;i<content.length;i++)
+	{
+		content=content.replace("[微笑]","<img src='images/14.gif' />");
+		content=content.replace("[撇嘴]","<img src='images/1.gif' />");
+		content=content.replace("[色]","<img src='images/2.gif' />");
+		content=content.replace("[发呆]","<img src='images/3.gif' />");
+		content=content.replace("[得意]","<img src='images/4.gif' />");
+		content=content.replace("[流泪]","<img src='images/5.gif' />");
+		content=content.replace("[害羞]","<img src='images/6.gif' />");
+		content=content.replace("[闭嘴]","<img src='images/7.gif' />");
+		content=content.replace("[睡]","<img src='images/8.gif' />");
+	}
+
+	
+
+
 	var html="";
 	html+='						<div class="chatContentSelf">';
 	html+='							<img class="avatarImg" src="images/g (1).jpg">';
 	html+='							<p class="chatNick">六道';
 	html+='							</p>';
-	html+='							<p class="chatContent ">'+c+'</p>';
+	html+='							<p class="chatContent ">'+content+'</p>';
 	html+='						</div>';
 	$(".chatPanel"+n).find(".chatBodyBox").append(html);
 }
