@@ -320,24 +320,26 @@ $(function(){
 
 	//改变背景
 	$(".changBgFre").click(function(){
-		$(".bgAllImage").css({"opacity":"0"});
+		//$(".bgAllImage").css({"opacity":"0"});
 		BgIndex--;
 		if(BgIndex==-1)
 		{
 			BgIndex=28;
 		}
-		$(".bgAllImage").attr("src","css/images/"+BgIndex+".jpg");
-		$(".bgAllImage").animate({"opacity":"1"},1000);
+		$(".bgAllImage").css("background-image",'url("css/images/'+BgIndex+'.jpg")');
+		//$(".bgAllImage").attr("background-image","css/images/"+BgIndex+".jpg");
+		//$(".bgAllImage").animate({"opacity":"1"},1000);
 	});
 	$(".changBgNext").click(function(){
-		$(".bgAllImage").css({"opacity":"0"});
+		//$(".bgAllImage").css({"opacity":"0"});
 		BgIndex++;
 		if(BgIndex==29)
 		{
 			BgIndex=0;
 		}
-		$(".bgAllImage").attr("src","css/images/"+BgIndex+".jpg");
-		$(".bgAllImage").animate({"opacity":"1"},1000);
+		$(".bgAllImage").css("background-image",'url("css/images/'+BgIndex+'.jpg")');
+		//$(".bgAllImage").attr("src","css/images/"+BgIndex+".jpg");
+		//$(".bgAllImage").animate({"opacity":"1"},1000);
 	});
 	
 

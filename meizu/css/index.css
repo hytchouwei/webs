@@ -14,22 +14,27 @@ body input, body textarea {font-family: "微软雅黑","Microsoft Yahei",Arial,H
 .trigger a{color: #7f7f7f;}
 .trigger a:hover{color: #474747;}
 .trigger a:nth-child(3){color:#474747;}
-
-
-#mainForm{margin-top: 100px;width: 343px;margin: 100px auto 0px;overflow: hidden;}
+/*mainForm1*/
+.mainForm1{display: none;}
+.mainForm{margin-top: 100px;width: 343px;margin: 100px auto 0px;overflow: hidden;}
 .number{font-size: 20px;margin-left: -5px;margin-bottom: 30px;width: 350px;text-align: center;}
 .number a{color: #515151;}
-.linkABlue:link, .linkABlue:visited {color: #00a7ea;}
+.linkABlue:visited {color: #00a7ea;}
 .linkAGray:hover{color: #2b2b2b;}
 .number span{color: #d9d9d9;display: inline-block;border: 1px solid #dadada;border-left: 1px;height: 16px;line-height: 20px;margin-right: 50px;margin-left: 50px;}
 .normalInput{position: relative;display: inline-block;padding: 0px 10px;width: 320px;height: 50px;line-height: 22px;font-size: 16px;margin-bottom: 20px;border: 1px solid #dadada;outline: none;color: #474747;overflow: visible;}
+.error{display: none;margin-left: 0px;margin-bottom: 20px;color: red;}
 #mainForm input {line-height: 22px;padding: 14px 0;height: 22px;}
 .normalInput input {font-size: 16px;width: 100%;height: 50px;}
+.errorC{ margin-bottom: 10px;border-color: red;color: red;}
+.checkedN{border: 1px solid #1ece6d;}
+
 
 .formLine{color: #d9d9d9;height: 40px;display: inline-block;border-left: 1px solid #dadada;position: absolute;right: 100px;top: 5px;}
 #getKey{width: 80px;border: none;outline: none;height: 50px;line-height: 50px;font-size: 16px;position: absolute;right: 10px;top: 0px;}
 .i_icon{display: inline-block;width: 100%;height: 100%;overflow: hidden;}
 .normalInput .password{float: left;width: 200px;}
+.normalInput .password1{float: left;width: 200px;display: none;}
 .pwdBtnShow {outline: none;position: relative;display: inline-block;width: 30px;height: 30px;cursor: pointer;overflow: hidden;float: right;margin-right: 5px;}
 #pwdBtn {margin-top: 13px;margin-bottom: 10px;}
 .pwdBtnShow i{background-image:url("images/elements.png");background-position: -30px -93px; background-repeat: no-repeat;}
@@ -40,9 +45,14 @@ body input, body textarea {font-family: "微软雅黑","Microsoft Yahei",Arial,H
 .pointer{cursor: pointer;}
 .otherError{display: none;margin-left: 0px;margin-bottom: 20px;color: red;}
 .fullBtnBlue{display: inline-block;height: 50px;width: 342px;font-size: 20px;line-height: 50px;text-align: center;margin-bottom: 20px;outline: none;cursor: pointer;background-color: #32a5e7;color: #fff;}
+/*mainForm1end*/
 
-
-
+/*mainForm2*/
+.linkAGray2:visited {color: #00a7ea;}
+.linkABlue2:hover{color: #2b2b2b;}
+.normalInput .username{width: 220px;border: none;outline: none;font-size: 16px;height: 50px;line-height: 22px;}
+.grayTip {height: 50px;line-height: 50px;vertical-align: top;display: inline-block;color: #7f7f7f;}
+/*mainForm2end*/
 
 .footer{position: absolute;bottom: 0;width: 100%;height: 130px;border-top: solid 1px #E5E6E7;background-color: #fff;color: black;top: 669px;}
 .footerInner{width: 1000px;margin: 24px auto 30px;}
