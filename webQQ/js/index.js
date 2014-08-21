@@ -180,10 +180,9 @@ $(function(){
 			}
 			send(numC[0],content);
 			$(this).parent().find(".chatTextarea").val("");
-			$(".Ltqq"+numC[0]).find(".lastChat").html(content);
 		}
 		
-
+		$(".chatBodyBox").scrollTop($(".chatBodyBox")[0].scrollHeight); 
 		
 	});
 	//键盘发送
@@ -477,6 +476,7 @@ function send(n,c){
 	html+='							<p class="chatContent ">'+content+'</p>';
 	html+='						</div>';
 	$(".chatPanel"+n).find(".chatBodyBox").append(html);
+	$(".Ltqq"+n).find(".lastChat").html(content);
 }
 
 
