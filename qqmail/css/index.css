@@ -1,0 +1,87 @@
+*{ margin: 0;padding: 0;}
+ul,li{ list-style: none;}
+a{ text-decoration: none;}
+img{ border: 0;}
+ body {font-family: "lucida Grande",Verdana;font-size: 12px;-webkit-font-smoothing: subpixel-antialiased;}
+body{overflow: hidden;}
+.resize{position: relative;width: 1366px;height: 66px;background-image: url("images/top_bg_list104473.gif");background-repeat: repeat-x;}
+.topdata {background: url("images/top_data104473.gif");background-repeat: no-repeat; width: 100%;height: 66px;}
+.contentBox{ width: 100%;height: 596px;position: relative;}
+.contentLeft{ width: 187px; height: 596px;/*border-right: 1px solid #b0bac6;background: #95A1B6;*/}
+.contentRight{position: absolute;top: 0;left: 192px;bottom: 0;right: 0;overflow: hidden;z-index: 1;}
+
+
+
+
+/*顶部*/
+.lgoo{ position: absolute;left: 5px;z-index: 1;}
+.imlgoo{width: 215px;height: 60px;display: block;float: left;}
+.imlgoo img{background-image: url("images/logo_16_0104473.gif");width: 215px;height: 60px;border: none;}
+.switch{float: left;margin: 12px 0 0 0;line-height: 18px;color: #006091;}
+.switchLeft{ float: left;margin-top: 1px;}
+.switchLeftS{font-size: 11px;font-family: arial,sans-serif;padding-bottom: 5px;opacity: 0.45;cursor: pointer;}
+.account{ cursor: pointer;}
+.switchLeft b{ font-weight: bold;}
+.switchLeft a{color: #006091;}
+.addrtitle{color: #7a8f99;;}
+
+
+.topdataRight{float: right;width: 745px;height: 66px;background: #354b66 url("images/top_bg104473.jpg");}
+.install{float: right;margin: 6px 8px 0 0;}
+.topdataRight a{color: #006091;}
+
+.search{position: absolute;z-index: 1;right: 0;width: 286px;top: 37px;}
+.smartsearch{position: relative;border: 1px solid #BBB;background: #FFF;padding: 1px 21px;height: 18px;line-height: 18px;margin: 3px 5px 3px 2px;border-radius: 2px;box-shadow: 0 1px 1px #E6E6E6 inset;}
+.searchinput{background: #fff;width: 100%;height: 18px;line-height: 18px;font-size: 12px;outline: none;color: rgb(160, 160, 160);border:0;}
+.ssIcon{ width: 18px;height: 16px;display: inline-block;vertical-align: middle;background: url("images/smartsearch104474.png") no-repeat;}
+.ssIconL{background-position: -3px -3px;left: 2px;top: 2px;position: absolute;}
+.ssIconR{background-position: -27px -4px;right: 2px;top: 3px;position: absolute;}
+
+/*顶部end*/
+
+.topline{background: url("images/topline_bg104473.gif");background-repeat: repeat-x;height: 11px;}
+.toplineimg{background: url("images/topline104473.gif") ;background-repeat:no-repeat;width: 197px;height: 11px;float: left;}
+
+/*contentLeft*/
+.fdbody {background: url("images/left_bottom_bg104473.jpg") #67b9dc 0 596px;}
+.bodybgbt {position: absolute;top: 0px;width: 192px;bottom: 0;}
+
+
+.leftPanel{left: 0;top: 0;width: 187px;position: absolute;bottom: 0;border-left: 0 none;height: auto;}
+.newskinbody{background: url("images/left_normal_bg104473.jpg");background-repeat: no-repeat; padding-left: 8px;}
+
+.navBarDiv{position: absolute;top:0px;right: 0;z-index: 1;}
+.navBarTd{height: 94px;width: auto;margin: 0;}
+.composepart{margin: 0 0 0 5px;padding: 2px 0 0 0;}
+.checkpart,.addrpart{margin: 6px 0 0 5px;}
+.fs{height: 24px;line-height: 24px;overflow: hidden;}
+.fs input{float: left;border: 0;padding: 0;width: 20px;height: 20px;margin: -20px 0 0 23px;outline: none;}
+.fs a{color: #006091;;width: 134px; padding-left: 50px;line-height: 24px;display: block;overflow: hidden;font-weight: bold;font-size: 14px;outline: none;font-family: "lucida Grande",Verdana;}
+.composebtn{background: url("images/mail1d47c7.png") 0 -1px no-repeat;}
+.checkbtn{background: url("images/mail1d47c7.png") 0 -33px no-repeat;}
+.addrbtn{background: url("images/mail1d47c7.png") 0 -63px no-repeat;}
+
+
+
+.navMidBar{width: auto;margin-left: 13px;position: absolute;top: 102px;left: 0;right: 0;bottom: 3px;overflow: hidden;height: auto;}
+.folderDiv {position: absolute;top: 0;left: 0;bottom: 0;right: 0;height: 100%;overflow: auto;margin: 0 14px 0 6px;}
+.SysFolderList .fdul{padding-top: 5px;}
+.fdulLi{margin: 0 0 1px;height: 22px;line-height: 20px;overflow: hidden;vertical-align: middle;white-space: nowrap;}
+.fdulLiS{background: #4f7333;color: #fff;}
+.fdulLi a{padding-left: 13px;color: #e2f1dc;;display: block;height: 22px;}
+.fdulLiS a{color: #FFFFFF;}
+.icoInput{vertical-align: middle;background: url("images/mail1d47c7.png") -80px -176px no-repeat;width: 12px;height: 12px;margin: -4px 0 0 5px;border: none;outline: none;}
+.sepline{border-top: 1px solid #4b6123;border-bottom: 1px solid #86ac6a;height: 0; overflow: hidden;margin: 5px 5px 0 5px;}
+.fdul{padding-top: 3px;}
+.drifticon{background-position: -32px -190px;width: 12px;height: 14px;margin: -4px 0 0 5px;vertical-align: middle;}
+.fsSep{ padding-left: 9px;white-space: nowrap;}
+.fsSep a{white-space: nowrap;padding: 1px 4px 3px;border: none;color: #e2f1dc;display: inline;white-space: nowrap;}
+.fsSep span{color: #e2f1dc;margin: 0 3px;}
+
+/*contentLeftend*/
+
+/*contentRight*/
+
+.tbody{ padding: 3px 7px 6px 4px;min-width: 675px;overflow-x: auto;width: 100%;}
+.tbodyTitle{}
+/*contentRightend*/
