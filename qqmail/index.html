@@ -9,6 +9,9 @@
 </head>
 <body>
 	<div class="resize">
+		<div id="msgBoxDIV">
+			<span class="errmsg">未选中任何邮件</span>
+		</div>
 		<div class="topdata">
 			<div class="lgoo">
 				<a href="##" class="imlgoo">
@@ -131,8 +134,606 @@
 		</div>
 		<div class="contentRight">
 			<div class="tbody">
-				<div class="tbodyTitle"></div>
-				<form></form>
+				<div class="tbodyTitle">
+					收件箱
+					<span class="TitleUl">
+						(共9封)
+					</span>
+				</div>
+				<form class="frm">
+					<div class="tool floatX">
+						<div class="toolright">1/1页</div>
+						<div class="toolleft">
+							<a href="##" class="btnGray btnSpace del">删除</a>
+							<a href="##" class="btnGray btnSpace">彻底删除</a>
+							<a href="##" class="btnGray btnSpace">转发</a>
+							<a href="##" class="btnGray btnSpace">举报</a>
+							<a href="##" class="btnGray btnSpace tag">全部标记为已读</a>
+							<span class="btnSpace">
+								<a href="##" class="btnGray  btnDropdown btnDropdownTag">
+									<span>标记为...</span>
+									<span class="icoSelectS"></span>
+									<div class="icoSelectSN">
+										<div class="menu_base">
+											<div class="menuall">
+												<div class="menu_item">已读邮件</div>
+												<div class="menu_item">未读邮件</div>
+												<div class="menu_itemLine">
+													<div></div>
+												</div>
+												<div class="menu_item">星标邮件</div>
+												<div class="menu_item">取消星标</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</span>
+							<span class="btnSpace">
+								<a href="##" class="btnGray  btnDropdown">
+									<span>移动到...</span>
+									<span class="icoSelectS"></span>
+									<div class="icoSelectSN"></div>
+								</a>
+							</span>
+						</div>
+					</div>
+					<table class="Ta" cellpadding="0" cellspacing="0">
+						<tbody>
+							<tr>
+								<td style="padding:1px 0 1px 5px;" width="27">
+									<input name="checkedall" type="checkbox" title="选中/取消选中">
+								</td>
+								<td class="taTitle2" style="width:6px;font-size:1px;padding:0;">&nbsp;</td>
+								<td style="width:31px;padding:0;">
+									<input type="button" class="icoMailtitle" disabled>
+								</td>
+								<td class="taTitle2" style="width:6px;font-size:1px;padding:0;">&nbsp;</td>
+								<td class="o_title2" style="width:135px;*width:134px;">
+									<a href="##">发件人</a>
+								</td>
+								<td class="taTitle2" style="width:6px;font-size:1px;padding:0;">&nbsp;</td>
+								<td class="o_title2">
+									<a href="##">主题</a>
+								</td>
+								<td class="taTitle2" style="width:6px;font-size:1px;padding:0;">&nbsp;</td>
+								<td class="o_title2" style="padding-left:2px;width:100px;">
+									<div style="margin-left:12px;">
+										<a href="##">时间↓</a>
+									</div>
+								</td>
+								<td style="width:20px;font-size:1px;padding-left:2px">&nbsp;</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="bd talk">
+						<a class="cur_default">
+							<label for="showtoday2" hidefocus="">
+								<b>今天</b> (
+								<span class="newfd underline" title="选中组内该页所有邮件" hidefocus="">3 封</span>)
+							</label>
+						</a>
+					</div>
+					<div class="toarea" id="showtoday1">
+						<table class="i M" cellspacing="0">
+							<tbody>
+								<tr>
+									<td class="cs">
+										<input name="mailid" type="checkbox" id="showtoday2">
+									</td>
+									<td class="ci">
+										<div class="ciz ">&nbsp;</div>
+										<div class="cir Rr" title="新窗口读信">&nbsp;</div>
+										<div class="cij Ju" title="附件">&nbsp;</div>
+									</td>
+									<td hitmailid="" class="l">
+										<table cellspacing="0" class="i">
+											<tbody>
+												<tr>
+													<td class="tl tf" title="passport@baidu.com">
+														<nobr>baidu &nbsp;</nobr>
+													</td>
+													<td class="fg_n ">
+														<div></div>
+													</td>
+													<td class="gt">
+														<div class="tf no">
+															<u tabindex="0" class="black tt ">百度帐号--安全提醒</u>
+															<b class="no "></b>&nbsp;
+														</div>                                                
+														<div class="TagDiv">                                                              
+														</div>                                                
+													</td>
+													<td class="dt">
+														<div>7月30日</div>
+													</td>
+													<td class="fg" title="标记星标">
+														<div></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="i M" cellspacing="0">
+							<tbody>
+								<tr>
+									<td class="cs">
+										<input name="mailid" type="checkbox">
+									</td>
+									<td class="ci">
+										<div class="ciz ">&nbsp;</div>
+										<div class="cir Rr" title="新窗口读信">&nbsp;</div>
+										<div class="cij Ju" title="附件">&nbsp;</div>
+									</td>
+									<td hitmailid="" class="l">
+										<table cellspacing="0" class="i">
+											<tbody>
+												<tr>
+													<td class="tl tf" title="passport@baidu.com">
+														<nobr>baidu &nbsp;</nobr>
+													</td>
+													<td class="fg_n ">
+														<div></div>
+													</td>
+													<td class="gt">
+														<div class="tf no">
+															<u tabindex="0" class="black tt ">百度帐号--安全提醒</u>
+															<b class="no "></b>&nbsp;
+														</div>                                                
+														<div class="TagDiv">                                                              
+														</div>                                                
+													</td>
+													<td class="dt">
+														<div>7月30日</div>
+													</td>
+													<td class="fg" title="标记星标">
+														<div></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="i M" cellspacing="0">
+							<tbody>
+								<tr>
+									<td class="cs">
+										<input name="mailid" type="checkbox">
+									</td>
+									<td class="ci">
+										<div class="ciz ">&nbsp;</div>
+										<div class="cir Rr" title="新窗口读信">&nbsp;</div>
+										<div class="cij Ju" title="附件">&nbsp;</div>
+									</td>
+									<td hitmailid="" class="l">
+										<table cellspacing="0" class="i">
+											<tbody>
+												<tr>
+													<td class="tl tf" title="passport@baidu.com">
+														<nobr>baidu &nbsp;</nobr>
+													</td>
+													<td class="fg_n ">
+														<div></div>
+													</td>
+													<td class="gt">
+														<div class="tf no">
+															<u tabindex="0" class="black tt ">百度帐号--安全提醒</u>
+															<b class="no "></b>&nbsp;
+														</div>                                                
+														<div class="TagDiv">                                                              
+														</div>                                                
+													</td>
+													<td class="dt">
+														<div>7月30日</div>
+													</td>
+													<td class="fg" title="标记星标">
+														<div></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="bd talk">
+						<a class="cur_default">
+							<label for="showtoday2" hidefocus="">
+								<b>星期四</b> (
+								<span class="newfd underline" title="选中组内该页所有邮件" hidefocus="">4 封</span>)
+							</label>
+						</a>
+					</div>
+					<div class="toarea" id="showtoday2">
+						<table class="i M" cellspacing="0">
+							<tbody>
+								<tr>
+									<td class="cs">
+										<input name="mailid" type="checkbox">
+									</td>
+									<td class="ci">
+										<div class="ciz ">&nbsp;</div>
+										<div class="cir Rr" title="新窗口读信">&nbsp;</div>
+										<div class="cij Ju" title="附件">&nbsp;</div>
+									</td>
+									<td hitmailid="" class="l">
+										<table cellspacing="0" class="i">
+											<tbody>
+												<tr>
+													<td class="tl tf" title="passport@baidu.com">
+														<nobr>baidu &nbsp;</nobr>
+													</td>
+													<td class="fg_n ">
+														<div></div>
+													</td>
+													<td class="gt">
+														<div class="tf no">
+															<u tabindex="0" class="black tt ">百度帐号--安全提醒</u>
+															<b class="no "></b>&nbsp;
+														</div>                                                
+														<div class="TagDiv">                                                              
+														</div>                                                
+													</td>
+													<td class="dt">
+														<div>7月30日</div>
+													</td>
+													<td class="fg" title="标记星标">
+														<div></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="i M" cellspacing="0">
+							<tbody>
+								<tr>
+									<td class="cs">
+										<input name="mailid" type="checkbox">
+									</td>
+									<td class="ci">
+										<div class="ciz ">&nbsp;</div>
+										<div class="cir Rr" title="新窗口读信">&nbsp;</div>
+										<div class="cij Ju" title="附件">&nbsp;</div>
+									</td>
+									<td hitmailid="" class="l">
+										<table cellspacing="0" class="i">
+											<tbody>
+												<tr>
+													<td class="tl tf" title="passport@baidu.com">
+														<nobr>baidu &nbsp;</nobr>
+													</td>
+													<td class="fg_n ">
+														<div></div>
+													</td>
+													<td class="gt">
+														<div class="tf no">
+															<u tabindex="0" class="black tt ">百度帐号--安全提醒</u>
+															<b class="no "></b>&nbsp;
+														</div>                                                
+														<div class="TagDiv">                                                              
+														</div>                                                
+													</td>
+													<td class="dt">
+														<div>7月30日</div>
+													</td>
+													<td class="fg" title="标记星标">
+														<div></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="i M" cellspacing="0">
+							<tbody>
+								<tr>
+									<td class="cs">
+										<input name="mailid" type="checkbox">
+									</td>
+									<td class="ci">
+										<div class="ciz ">&nbsp;</div>
+										<div class="cir Rr" title="新窗口读信">&nbsp;</div>
+										<div class="cij Ju" title="附件">&nbsp;</div>
+									</td>
+									<td hitmailid="" class="l">
+										<table cellspacing="0" class="i">
+											<tbody>
+												<tr>
+													<td class="tl tf" title="passport@baidu.com">
+														<nobr>baidu &nbsp;</nobr>
+													</td>
+													<td class="fg_n ">
+														<div></div>
+													</td>
+													<td class="gt">
+														<div class="tf no">
+															<u tabindex="0" class="black tt ">百度帐号--安全提醒</u>
+															<b class="no "></b>&nbsp;
+														</div>                                                
+														<div class="TagDiv">                                                              
+														</div>                                                
+													</td>
+													<td class="dt">
+														<div>7月30日</div>
+													</td>
+													<td class="fg" title="标记星标">
+														<div></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="i M" cellspacing="0">
+							<tbody>
+								<tr>
+									<td class="cs">
+										<input name="mailid" type="checkbox">
+									</td>
+									<td class="ci">
+										<div class="ciz ">&nbsp;</div>
+										<div class="cir Rr" title="新窗口读信">&nbsp;</div>
+										<div class="cij Ju" title="附件">&nbsp;</div>
+									</td>
+									<td hitmailid="" class="l">
+										<table cellspacing="0" class="i">
+											<tbody>
+												<tr>
+													<td class="tl tf" title="passport@baidu.com">
+														<nobr>baidu &nbsp;</nobr>
+													</td>
+													<td class="fg_n ">
+														<div></div>
+													</td>
+													<td class="gt">
+														<div class="tf no">
+															<u tabindex="0" class="black tt ">百度帐号--安全提醒</u>
+															<b class="no "></b>&nbsp;
+														</div>                                                
+														<div class="TagDiv">                                                              
+														</div>                                                
+													</td>
+													<td class="dt">
+														<div>7月30日</div>
+													</td>
+													<td class="fg" title="标记星标">
+														<div></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="bd talk">
+						<a class="cur_default">
+							<label for="showtoday3" hidefocus="">
+								<b>上周</b> (
+								<span class="newfd underline" title="选中组内该页所有邮件" hidefocus="">4 封</span>)
+							</label>
+						</a>
+					</div>
+					<div class="toarea" id="showtoday3">
+						<table class="i M" cellspacing="0">
+							<tbody>
+								<tr>
+									<td class="cs">
+										<input name="mailid" type="checkbox">
+									</td>
+									<td class="ci">
+										<div class="ciz ">&nbsp;</div>
+										<div class="cir Rr" title="新窗口读信">&nbsp;</div>
+										<div class="cij Ju" title="附件">&nbsp;</div>
+									</td>
+									<td hitmailid="" class="l">
+										<table cellspacing="0" class="i">
+											<tbody>
+												<tr>
+													<td class="tl tf" title="passport@baidu.com">
+														<nobr>baidu &nbsp;</nobr>
+													</td>
+													<td class="fg_n ">
+														<div></div>
+													</td>
+													<td class="gt">
+														<div class="tf no">
+															<u tabindex="0" class="black tt ">百度帐号--安全提醒</u>
+															<b class="no "></b>&nbsp;
+														</div>                                                
+														<div class="TagDiv">                                                              
+														</div>                                                
+													</td>
+													<td class="dt">
+														<div>7月30日</div>
+													</td>
+													<td class="fg" title="标记星标">
+														<div></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="i M" cellspacing="0">
+							<tbody>
+								<tr>
+									<td class="cs">
+										<input name="mailid" type="checkbox">
+									</td>
+									<td class="ci">
+										<div class="ciz ">&nbsp;</div>
+										<div class="cir Rr" title="新窗口读信">&nbsp;</div>
+										<div class="cij Ju" title="附件">&nbsp;</div>
+									</td>
+									<td hitmailid="" class="l">
+										<table cellspacing="0" class="i">
+											<tbody>
+												<tr>
+													<td class="tl tf" title="passport@baidu.com">
+														<nobr>baidu &nbsp;</nobr>
+													</td>
+													<td class="fg_n ">
+														<div></div>
+													</td>
+													<td class="gt">
+														<div class="tf no">
+															<u tabindex="0" class="black tt ">百度帐号--安全提醒</u>
+															<b class="no "></b>&nbsp;
+														</div>                                                
+														<div class="TagDiv">                                                              
+														</div>                                                
+													</td>
+													<td class="dt">
+														<div>7月30日</div>
+													</td>
+													<td class="fg" title="标记星标">
+														<div></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="i M" cellspacing="0">
+							<tbody>
+								<tr>
+									<td class="cs">
+										<input name="mailid" type="checkbox">
+									</td>
+									<td class="ci">
+										<div class="ciz ">&nbsp;</div>
+										<div class="cir Rr" title="新窗口读信">&nbsp;</div>
+										<div class="cij Ju" title="附件">&nbsp;</div>
+									</td>
+									<td hitmailid="" class="l">
+										<table cellspacing="0" class="i">
+											<tbody>
+												<tr>
+													<td class="tl tf" title="passport@baidu.com">
+														<nobr>baidu &nbsp;</nobr>
+													</td>
+													<td class="fg_n ">
+														<div></div>
+													</td>
+													<td class="gt">
+														<div class="tf no">
+															<u tabindex="0" class="black tt ">百度帐号--安全提醒</u>
+															<b class="no "></b>&nbsp;
+														</div>                                                
+														<div class="TagDiv">                                                              
+														</div>                                                
+													</td>
+													<td class="dt">
+														<div>7月30日</div>
+													</td>
+													<td class="fg" title="标记星标">
+														<div></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="i M" cellspacing="0">
+							<tbody>
+								<tr>
+									<td class="cs">
+										<input name="mailid" type="checkbox">
+									</td>
+									<td class="ci">
+										<div class="ciz ">&nbsp;</div>
+										<div class="cir Rr" title="新窗口读信">&nbsp;</div>
+										<div class="cij Ju" title="附件">&nbsp;</div>
+									</td>
+									<td hitmailid="" class="l">
+										<table cellspacing="0" class="i">
+											<tbody>
+												<tr>
+													<td class="tl tf" title="passport@baidu.com">
+														<nobr>baidu &nbsp;</nobr>
+													</td>
+													<td class="fg_n ">
+														<div></div>
+													</td>
+													<td class="gt">
+														<div class="tf no">
+															<u tabindex="0" class="black tt ">百度帐号--安全提醒</u>
+															<b class="no "></b>&nbsp;
+														</div>                                                
+														<div class="TagDiv">                                                              
+														</div>                                                
+													</td>
+													<td class="dt">
+														<div>7月30日</div>
+													</td>
+													<td class="fg" title="标记星标">
+														<div></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tool floatX">
+						<div class="toolright">1/1页</div>
+						<div class="toolleft">
+							<a href="##" class="btnGray btnSpace">删除</a>
+							<a href="##" class="btnGray btnSpace">彻底删除</a>
+							<a href="##" class="btnGray btnSpace">转发</a>
+							<a href="##" class="btnGray btnSpace">举报</a>
+							<a href="##" class="btnGray btnSpace tag">全部标记为已读</a>
+							<span class="btnSpace">
+								<a href="##" class="btnGray btnDropdown btnDropdownTag">
+									<span>标记为...</span>
+									<span class="icoSelectS"></span>
+									<div class="icoSelectSN icoSelectSNS">
+										<div class="menu_base">
+											<div class="menuall">
+												<div class="menu_item">已读邮件</div>
+												<div class="menu_item">未读邮件</div>
+												<div class="menu_itemLine">
+													<div></div>
+												</div>
+												<div class="menu_item">星标邮件</div>
+												<div class="menu_item">取消星标</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</span>
+							<span class="btnSpace">
+								<a href="##" class="btnGray  btnDropdown">
+									<span>移动到...</span>
+									<span class="icoSelectS"></span>
+									<div class="icoSelectSN"></div>
+								</a>
+							</span>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
