@@ -1,0 +1,7 @@
+D:\2014.8.25\ITXY.FeiGou\ITXY.FeiGou\bin\Debug\ITXY.FeiGou.exe
+D:\2014.8.25\ITXY.FeiGou\ITXY.FeiGou\bin\Debug\ITXY.FeiGou.pdb
+D:\2014.8.25\ITXY.FeiGou\ITXY.FeiGou\obj\x86\Debug\ITXY.FeiGou.MainForm.resources
+D:\2014.8.25\ITXY.FeiGou\ITXY.FeiGou\obj\x86\Debug\ITXY.FeiGou.Properties.Resources.resources
+D:\2014.8.25\ITXY.FeiGou\ITXY.FeiGou\obj\x86\Debug\ITXY.FeiGou.csproj.GenerateResource.Cache
+D:\2014.8.25\ITXY.FeiGou\ITXY.FeiGou\obj\x86\Debug\ITXY.FeiGou.exe
+D:\2014.8.25\ITXY.FeiGou\ITXY.FeiGou\obj\x86\Debug\ITXY.FeiGou.pdb
